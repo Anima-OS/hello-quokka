@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="chrome://global/content/hello-quokka/hello-quokka.css">
+  <title>Hello, Quokka</title>
+</head>
+
+<body>
+  <div class="stage">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="mySlides">
+      <img class="slide" src="chrome://global/content/hello-quokka/1.jpg">
+    </div>
+
+    <div class="mySlides">
+      <img class="slide" src="chrome://global/content/hello-quokka/2.jpg">
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="chrome://global/content/hello-quokka/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pudding, the beer bottle snuggling cat">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="chrome://global/content/hello-quokka/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pudding, the beer bottle snuggling cat">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000);
+    }
+  </script>
+</body>
+
+</html>

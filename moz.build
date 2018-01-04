@@ -1,0 +1,6 @@
+EXTRA_COMPONENTS += [
+  'hello-quokka.js',
+  'hello-quokka.manifest',
+]
+
+JAR_MANIFESTS += ['jar.mn']

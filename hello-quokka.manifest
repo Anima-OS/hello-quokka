@@ -1,0 +1,2 @@
+component {e97ba230-f016-11e7-8f1a-0800200c9a66} hello-quokka.js
+contract @mozilla.org/network/protocol/about;1?what=hello-world {e97ba230-f016-11e7-8f1a-0800200c9a66}

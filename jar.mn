@@ -1,0 +1,5 @@
+toolkit.jar:
+  content/global/hello-quokka/1.jpg (content/1.jpg)
+  content/global/hello-quokka/2.jpg (content/2.jpg)
+  content/global/hello-quokka/hello-quokka.css (content/hello-quokka.css)
+  content/global/hello-quokka/hello-quokka.html (content/hello-quokka.html)
